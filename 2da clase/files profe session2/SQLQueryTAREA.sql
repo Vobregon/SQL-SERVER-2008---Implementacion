@@ -1,0 +1,47 @@
+
+--Alumno:
+--Curso:
+
+--Crear la Base de datos
+
+CREATE DATABASE MarketPERU
+GO
+
+USE MarketPERU
+
+CREATE DATABASE MarketPERU
+ON PRIMARY (
+NAME= BibliotecaCEPS_dat,
+FILENAME='C:\DATA\MarketPERU.mdf',
+SIZE = 30MB,
+MAXSIZE = 50MB,
+FILEGROWTH = 2MB
+)LOG ON (
+NAME=MarketPERU_log,
+FILENAME='C:\DATA\MarketPERU.ldf',
+SIZE = 10MB,
+MAXSIZE = 20MB,
+FILEGROWTH = 2MB
+)
+
+
+
+
+CREATE TABLE ORDEN(
+idOrden INT NOT NULL,
+FechaOrden  DATETIME NOT NULL,
+FechaEntrada DATETIME NOT NULL
+)
+
+
+
+CREATE TABLE PROVEEDOR(
+idProveedor INT NOT NULL,
+Nombre  VARCHAR (60) NOT NULL,
+Representante VARCHAR (60)NOT NULL
+Direccion VARCHAR (60)NOT NULL
+Ciudad VARCHAR (20) NOT NULL
+Departamento VARCHAR (20) NOT NULL
+)
+
+
